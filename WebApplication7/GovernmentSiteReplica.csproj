@@ -1,0 +1,797 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE8A0526-8580-4D5E-8B1E-CEC6A42ECE51}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication7</RootNamespace>
+    <AssemblyName>WebApplication7</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44347</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Resources\bg.html" />
+    <Content Include="Resources\bg\404.html" />
+    <Content Include="Resources\bg\administratsia.html" />
+    <Content Include="Resources\bg\administratsia\byudzhet\kasovo-izpalnenie-na-darzhavniya-byudzhet.html" />
+    <Content Include="Resources\bg\administratsia\dokumenti\drugi-dokumenti.html" />
+    <Content Include="Resources\bg\administratsia\dostap-do-obshtestvena-informatsia\zdoi.html" />
+    <Content Include="Resources\bg\administratsia\funktsii-i-struktura\kontakti.html" />
+    <Content Include="Resources\bg\administratsia\funktsii-i-struktura\ustroystven-pravilnik.html" />
+    <Content Include="Resources\bg\administratsia\pomoshtna-informatsia.html" />
+    <Content Include="Resources\bg\administratsia\profil-na-kupuvacha\targove.html" />
+    <Content Include="Resources\bg\administratsia\registri-portali.html" />
+    <Content Include="Resources\bg\pravitelstvo.html" />
+    <Content Include="Resources\bg\pravitelstvo\balgarsko-predsedatelstvo-na-saveta-na-es\programa-na-saveta-na-es-po-vreme-na-estonskoto-balgarskoto-i-avstriyskoto-predsedatelstva.html" />
+    <Content Include="Resources\bg\pravitelstvo\ministar-predsedatel\biografia.html" />
+    <Content Include="Resources\bg\pravitelstvo\ministar-predsedatel\intervyuta.html" />
+    <Content Include="Resources\bg\pravitelstvo\partnyorstvo-za-otkrito-upravlenie.html" />
+    <Content Include="Resources\bg\pravitelstvo\partnyorstvo-za-otkrito-upravlenie\doklad-za-samootsenka-na-izpalnenieto-na-vtoriya-plan-za-deystvie-na-balgariya-za-perioda-2014-2016-g.html" />
+    <Content Include="Resources\bg\pravitelstvo\partnyorstvo-za-otkrito-upravlenie\novi-angazhimenti-v-ramkite-na-vtoriya-plan-za-deystvie-na-balgariya-za-uchastie-v-initsiativata.html" />
+    <Content Include="Resources\bg\pravitelstvo\partnyorstvo-za-otkrito-upravlenie\vtori-plan-za-deystvie-na-balgariya-po-initsiativata-“partnyorstvo-za-otkrito-upravlenie”.html" />
+    <Content Include="Resources\bg\pravitelstvo\partnyorstvo-za-otkrito-upravlenie\za-initsiativata.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\energetika.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\finansi.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\ikonomika.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\kultura.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\mladezh-i-sport.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\obrazovanie-i-nauka.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\obshtestven-red-i-sigurnost.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\okolna-sreda.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\otbrana.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\pravosadie.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\regionalna-politika.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\sotsialna-politika.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\transport.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\turizam.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\upravlenie-na-sredstvata-ot-evropeyskiya-sayuz.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\vanshna-politika.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\zdraveopazvane.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-na-pravitelstvoto\zemedelie-hrani-ribarstvo-i-gori.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-za-upravlenie-na-pravitelstvoto-na-republika-balgariya-za-perioda-2017-2021-g\nasheto-vizhdane.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-za-upravlenie-na-pravitelstvoto-na-republika-balgariya-za-perioda-2017-2021-g\osnovni-prioriteti-na-pravitelstvoto.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-za-upravlenie-na-pravitelstvoto-na-republika-balgariya-za-perioda-2017-2021-g\printsipi-pri-upravlenieto.html" />
+    <Content Include="Resources\bg\pravitelstvo\programa-za-upravlenie-na-pravitelstvoto-na-republika-balgariya-za-perioda-2017-2021-g\vavedenie.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\biser-petkov-ministar-na-truda-i-sotsialnata-politika.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\boil-banov-ministar-na-kulturata.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\danail-kirilov-ministar-na-pravosadieto.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\desislava-taneva-ministar-na-zemedelieto-hranite-i-gorite.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\ekaterina-zaharieva-zamestnik-ministar-predsedatel-po-pravosadnata-reforma-i-ministar-na-vanshnite-raboti.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\emil-karanikolov-ministar-na-ikonomikata.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\kiril-ananiev-ministar-na-zdraveopazvaneto.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\krasen-kralev-ministar-na-mladezhta-i-sporta.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\krasimir-karakachanov-zamestnik-ministar-predsedatel-po-obshtestveniya-red-i-sigurnostta-i-ministar-na-otbranata.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\krasimir-valchev-ministar-na-obrazovanieto-i-naukata.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\MARIANA-NIKOLOVA-zamestnik-ministar-predsedatel-po-ikonomicheskata-i-demografskata-politika.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\mladen-marinov-ministar-na-vatreshnite-raboti.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\neno-dimov-ministar-na-okolnata-sreda-i-vodite.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\nikolina-angelkova-ministar-na-turizma.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\petya-avramova-ministar-na-regionalnoto-razvitie-i-blagoustroystvoto.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\rosen-zhelyazkov-ministar-na-transporta-informatsionnite-tehnologii-i-saobshteniyata.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\temenuzhka-petkova-ministar-na-energetikata.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\tomislav-donchev-zamestnik-ministar-predsedatel.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\biografii\vladislav-goranov-ministar-na-finansite.html" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\intervyuta.html" />
+    <Content Include="Resources\bg\prestsentar.html" />
+    <Content Include="Resources\bg\prestsentar\galeria.html" />
+    <Content Include="Resources\bg\prestsentar\galeria\ministar-predsedatelya-boyko-borisov-prisastva-na-otkrivaneto-na-izneseniya-tsentar-za-spodeleni-uslugi-na-svetovnata-banka-v-sofia.html" />
+    <Content Include="Resources\bg\prestsentar\galeria\ministar-predsedatelyat-boyko-borisov-prisastva-na-natsionalnoto-voennomorsko-uchenie-„briz-2019“.html" />
+    <Content Include="Resources\bg\prestsentar\galeria\ministar-predsedatelyat-boyko-borisov-prisastva-na-zaklyuchitelniya-etap-na-takticheskoto-uchenie-s-boyni-strelbi-„shabla-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\galeria\ministar-predsedatelyat-boyko-borisov-uchastva-v-sreshtata-na-varha-na-initsiativata-„berlinski-protses“-v-poznan.html" />
+    <Content Include="Resources\bg\prestsentar\novini.html" />
+    <Content Include="Resources\bg\prestsentar\novini4658.html" />
+    <Content Include="Resources\bg\prestsentar\novini9ba9.html" />
+    <Content Include="Resources\bg\prestsentar\noviniaf4d.html" />
+    <Content Include="Resources\bg\prestsentar\novinifdb0.html" />
+    <Content Include="Resources\bg\prestsentar\novini\milen-lyutskanov-e-naznachen-za-zamestnik-ministar-na-vanshnite-raboti.html" />
+    <Content Include="Resources\bg\prestsentar\novini\ministar-predsedatelyat-borisov-uchastva-v-konferentsiyata-za-izmenenie-na-klimata-v-madrid.html" />
+    <Content Include="Resources\bg\prestsentar\novini\ministar-predsedatelyat-boyko-borisov-izprati-saboleznovatelna-telegrama-do-premiera-na-albaniya-edi-rama.html" />
+    <Content Include="Resources\bg\prestsentar\novini\negovo-sveteyshestvo-papa-frantsisk-pred-ministar-predsedatelya-boyko-borisov-mnogo-sardechno-vi-blagodarya-za-vashata-rabota-za-mira.html" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-balgariya-e-ot-nay-distsipliniranite-loyalni-chlenove-na-nato-tova-e-otsenkata-za-nas.html" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-donald-tramp-mozhe-da-ostane-v-sartsata-balgarite-za-mnogo-godini-ako-pomogne-za-otpadaneto-na-vizoviya-rezhim.html" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-i-kralyat-na-yordaniya-dogovoriha-domakinstvo-na-balgariya-po-protsesa-„akaba“-prez-2020-godina.html" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-kotooshu-e-poslanik-na-stranata-ni-i-na-es-gordeem-se-s-hora-kato-nego.html" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-otsenkata-na-S-and-P-Global-Ratings-se-dalzhi-i-na-prilaganata-razumna-fiskalna-politika.html" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-poiska-i-prie-ostavkata-na-ministar-biser-petkov.html" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-se-sreshtna-s-generalniya-sekretar-na-„reporteri-bez-granitsi“-kristof-deloar.html" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-se-sreshtna-s-prestolonaslednika-na-abu-dabi-sheyh-mohamed-bin-zayed-al-nahayan.html" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-v-madrid-balgariya-e-na-vtoro-myasto-v-es-po-namalyavane-na-emisiite-na-vagleroden-dioksid.html" />
+    <Content Include="Resources\bg\prestsentar\novini\vitsepremierat-mariyana-nikolova-se-sreshtna-s-poslanika-na-niderlandia.html" />
+    <Content Include="Resources\bg\prestsentar\novini\vitsepremierat-nikolova-uchastva-v-otbelyazvaneto-na-30-ata-godishnina-ot-priemaneto-na-konventsiyata-na-oon-za-pravata-na-deteto.html" />
+    <Content Include="Resources\bg\prestsentar\predstoyashti-sabitia.html" />
+    <Content Include="Resources\bg\prestsentar\predstoyashti-sabitia\list.html" />
+    <Content Include="Resources\bg\prestsentar\predstoyashti-sabitia\premierat-boyko-borisov-shte-uchastva-v-25-ata-konferentsiya-po-izmenenie-na-klimata-v-madrid.html" />
+    <Content Include="Resources\bg\prestsentar\predstoyashti-sabitia\redovnoto-pravitelstveno-zasedanie-shte-se-sastoi-na-4-dekemvri.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi4658.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi9ba9.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingiaf4d.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingifdb0.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\godishna-sreshta-na-ministar-predsedatelya-borisov-s-amerikanskata-targovska-kamara.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavlenie-na-ministar-predsedatelya-borisov-v-nachaloto-na-zasedanieto-na-ministerskiya-savet.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavlenie-na-premiera-borisov-sled-konsultativnata-sreshta-za-dvustrannite-otnosheniya-s-republika-severna-makedonia.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavlenie-na-premiera-borisov-sled-zasedanieto-na-saveta-po-sigurnostta.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavlenie-na-premiera-borisov-sled-zavrashtaneto-na-balgarskata-delegatsiya-ot-yordaniya.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavlenie-na-premiera-borisov-v-nachaloto-na-zasedanieto-na-ministerskiya-savet.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavlenie-za-mediite-s-premiera-na-kralstvo-kambodzha-hun-sen-i-podpisvane-na-dvustranni-dokumenti.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavleniya-na-ministar-predsedatelya-borisov-i-na-premiera-na-yordaniya-omar-razzaz.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavleniya-na-ministar-predsedatelya-boyko-borisov-i-na-premiera-na-republika-koreya-li-nak-yon.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavleniya-na-premiera-borisov-i-na-premiera-na-federalna-provintsiya-dolna-avstriya-yohanna-mikl-laytner.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\izyavleniyata-na-premiera-borisov-i-na-novoizbraniya-predsedatel-na-ek-ursula-fon-der-layen.html" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\preskonferentsiya-sled-podpisvaneto-na-dogovora-mezhdu-bulgartransgaz-i-konsortsium-arkad-vav-vrazka-s-balkanski-potok.html" />
+    <Content Include="Resources\bg\prestsentar\video\na-jivo.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms4658.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms9ba9.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-msaf4d.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-msfdb0.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-02-10-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-04-12-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-06-11-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-09-10-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-11-09-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-13-11-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-15-10-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-18-09-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-20-11-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-23-10-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-27-11-2019-g.html" />
+    <Content Include="Resources\bg\prestsentar\zasedaniya-na-ms\dneven-red-na-zasedanieto-na-ministerskiya-savet-na-31-10-2019-g.html" />
+    <Content Include="Resources\css\frontend\bootstrap.min.css" />
+    <Content Include="Resources\css\frontend\font-awesome.min.css" />
+    <Content Include="Resources\css\frontend\stylebea6.css" />
+    <Content Include="Resources\en.html" />
+    <Content Include="Resources\en\About-Bulgaria.html" />
+    <Content Include="Resources\en\About-Bulgaria\BULGARIAN-PUBLIC-HOLIDAYS\Bulgarian-public-holidays.html" />
+    <Content Include="Resources\en\About-Bulgaria\FORM-OF-GOVERNMENT\Form-of-government.html" />
+    <Content Include="Resources\en\About-Bulgaria\GENERAL-INFORMATION\General-information.html" />
+    <Content Include="Resources\en\About-Bulgaria\HISTORY\tabsss1.html" />
+    <Content Include="Resources\en\About-Bulgaria\NATIONAL-SYMBOLS\Bulgaria’s-National-Flag.html" />
+    <Content Include="Resources\en\Cabinet.html" />
+    <Content Include="Resources\en\Cabinet\CABINET-MEMBERS.html" />
+    <Content Include="Resources\en\Cabinet\Prime-Minister.html" />
+    <Content Include="Resources\en\Press-center.html" />
+    <Content Include="Resources\en\Press-center\LINKS.html" />
+    <Content Include="Resources\en\Press-center\News.html" />
+    <Content Include="Resources\en\Press-center\News\BULGARIA-AND-5-OTHER-EUROPEAN-STATES-SENT-A-LETTER-REQUESTING-A-REVIEW-OF-THE-MOBILITY-I-PACKAGE.html" />
+    <Content Include="Resources\en\Press-center\News\His-Holiness-Pope-Francis-to-Prime-Minister-Boyko-Borissov-I-very-cordially-thank-you-for-your-work-to-promote-peace.html" />
+    <Content Include="Resources\en\Press-center\News\PRIME-MINISTER-BORISSOV-AND-THE-KING-OF-JORDAN-NEGOTIATED-FOR-BULGARIA-TO-HOST-THE-AQABA-PROCESS-IN-2020.html" />
+    <Content Include="Resources\en\Press-center\News\PRIME-MINISTER-BORISSOV-IN-BRUSSELS-I-CANNOT-HAVE-ANY-SOLIDARITY-FOR-WAR-FOR-NO-ONE.html" />
+    <Content Include="Resources\en\Press-center\News\Prime-Minister-Borissov-met-with-the-Crown-Prince-of-Abu-Dhabi-Sheikh-Mohammed-Bin-Zayed-Al-Nahyan.html" />
+    <Content Include="Resources\en\Press-center\News\PRIME-MINISTER-BORISSOV-THE-GREAT-AMOUNT-OF-WORK-DONE-BY-THE-REPUBLIC-OF-NORTH-MACEDONIA-AND-ALBANIA-IS-TAKEN-INTO-ACCOUNT.html" />
+    <Content Include="Resources\en\Press-center\News\PRIME-MINISTER-BORISSOV-WITH-THE-REPUBLIC-OF-MACEDONIA-WE-DID-SO-THAT-INSTEAD-OF-ARGUING-WE-CELEBRATE-OUR-HEROES-TOGETHER.html" />
+    <Content Include="Resources\en\Press-center\News\Prime-Ministers-Borissov-and-Netanyahu-unveiled-a-monument-in-Tel-Aviv-dedicated-to-the-salvation-of-Bulgarian-Jews-in-1943.html" />
+    <Content Include="Resources\en\Press-center\PRESS-OFFICES.html" />
+    <Content Include="Resources\files\common\10new2.jpg" />
+    <Content Include="Resources\files\common\2.jpg" />
+    <Content Include="Resources\files\common\3.jpg" />
+    <Content Include="Resources\files\common\4.jpg" />
+    <Content Include="Resources\files\common\5.jpg" />
+    <Content Include="Resources\fonts\frontend\fontawesome-webfont3e6e.html" />
+    <Content Include="Resources\fonts\frontend\fontawesome-webfont3e6e.svg" />
+    <Content Include="Resources\images\favicons\favicon.ico" />
+    <Content Include="Resources\images\frontend\logo.png" />
+    <Content Include="Resources\images\frontend\minus-icon.png" />
+    <Content Include="Resources\images\frontend\plus-icon.png" />
+    <Content Include="Resources\images\frontend\right-arrow.png" />
+    <Content Include="Resources\images\frontend\social_icons_footer.png" />
+    <Content Include="Resources\images\upload\13\-j2a8303.jpg" />
+    <Content Include="Resources\images\upload\13\-j2a8332.jpg" />
+    <Content Include="Resources\images\upload\13\0212.jpg" />
+    <Content Include="Resources\images\upload\13\3p1a0124.jpg" />
+    <Content Include="Resources\images\upload\13\3p1a0930.jpg" />
+    <Content Include="Resources\images\upload\13\3p1a2802-1400-x-1025.jpg" />
+    <Content Include="Resources\images\upload\13\3p1a3160.jpg" />
+    <Content Include="Resources\images\upload\13\768\-j2a8303.jpg" />
+    <Content Include="Resources\images\upload\13\768\-j2a8332.jpg" />
+    <Content Include="Resources\images\upload\13\768\-s1l0562.jpg" />
+    <Content Include="Resources\images\upload\13\768\-s1l9496-1400-x-1081.jpg" />
+    <Content Include="Resources\images\upload\13\768\-s1l9793-1400-x-1240.jpg" />
+    <Content Include="Resources\images\upload\13\768\-s1l9879-1400-x-833.jpg" />
+    <Content Include="Resources\images\upload\13\768\01-1.jpg" />
+    <Content Include="Resources\images\upload\13\768\0212.jpg" />
+    <Content Include="Resources\images\upload\13\768\051102.jpg" />
+    <Content Include="Resources\images\upload\13\768\2011-nikolova-forum-1400-x-1050.jpg" />
+    <Content Include="Resources\images\upload\13\768\2910.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a0124.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a0624-1400-x-1001.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a0930.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a2324-1400-x-1050.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a2517.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a2802-1400-x-1025.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a3160.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a3171-1400-x-1023.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a3700new.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a9652-1400-x-818.jpg" />
+    <Content Include="Resources\images\upload\13\768\3p1a9832.jpg" />
+    <Content Include="Resources\images\upload\13\768\4_1571240894.jpg" />
+    <Content Include="Resources\images\upload\13\768\55.jpg" />
+    <Content Include="Resources\images\upload\13\768\9-1400-x-1050.jpg" />
+    <Content Include="Resources\images\upload\13\768\am-evropa.jpg" />
+    <Content Include="Resources\images\upload\13\768\fasada-ms_1575040840.jpg" />
+    <Content Include="Resources\images\upload\13\768\front-3.jpg" />
+    <Content Include="Resources\images\upload\13\768\front3.jpg" />
+    <Content Include="Resources\images\upload\13\768\front_1571389627.jpg" />
+    <Content Include="Resources\images\upload\13\768\front_1572423766.jpg" />
+    <Content Include="Resources\images\upload\13\768\front_1572943612.jpg" />
+    <Content Include="Resources\images\upload\13\768\front_1575367179.jpg" />
+    <Content Include="Resources\images\upload\13\768\image6-1400-x-934.jpg" />
+    <Content Include="Resources\images\upload\13\768\ms-fasada_1573750323.jpg" />
+    <Content Include="Resources\images\upload\13\768\ms8_1574942098.jpg" />
+    <Content Include="Resources\images\upload\13\768\nikolova-konventzia-deteto-1400-x-1050.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-arlington-1400-x-933.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-asselborn-1400-x-989.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-iri-1400-x-1038.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-iziavlenie-sandp-1400-x-1060.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-izkazvane-plenkovich-1400-x-1078.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-kmet-pernik-1400-x-1050.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-kneja-1400-x-1827.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-kniga-ms-zagreb-1400-x-1031.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-kniga-za-gosti-wh-1400-x-2117.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-kotooshu-1400-x-1079.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-madrid-family-photo-1400-x-758.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-nagrada-evrei.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-nis-1400-x-1040.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-obh-put-gabrovo-1400-x-933.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-odelo-1400-x-1050.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-prague-cohesion-1400-x-921.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-pristigane-tunel-1400-x-1050.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-sreshta-plenkovich-1400-x-933.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-strandza-1400-x-933.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-trump-1400-x-1048.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-trump-2-1400-x-933.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-trump-ovalen-kabinet-1400-x-933.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-ursula-guterish-1400-x-1201.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-us-chamber-of-commerce-1400-x-1050.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm-washington-pristigane-1400-x-731.jpg" />
+    <Content Include="Resources\images\upload\13\768\pm123_1573648923.jpg" />
+    <Content Include="Resources\images\upload\13\768\rm-neutralna_1574079671.jpg" />
+    <Content Include="Resources\images\upload\13\768\rm-neutralna_1574704264.jpg" />
+    <Content Include="Resources\images\upload\13\768\rm-neutralna_1574763474.jpg" />
+    <Content Include="Resources\images\upload\13\768\v-sh5123-01_1557044342.jpg" />
+    <Content Include="Resources\images\upload\13\768\western-balkans-2019-family-photo-1400-x-687.jpg" />
+    <Content Include="Resources\images\upload\13\fasada-ms_1575040840.jpg" />
+    <Content Include="Resources\images\upload\13\front-3.jpg" />
+    <Content Include="Resources\images\upload\13\front3.jpg" />
+    <Content Include="Resources\images\upload\13\front_1575367179.jpg" />
+    <Content Include="Resources\images\upload\13\ms8_1574942098.jpg" />
+    <Content Include="Resources\images\upload\13\nikolova-konventzia-deteto-1400-x-1050.jpg" />
+    <Content Include="Resources\images\upload\13\pm-iziavlenie-sandp-1400-x-1060.jpg" />
+    <Content Include="Resources\images\upload\13\pm-kotooshu-1400-x-1079.jpg" />
+    <Content Include="Resources\images\upload\13\pm-madrid-family-photo-1400-x-758.jpg" />
+    <Content Include="Resources\images\upload\13\pm-ursula-guterish-1400-x-1201.jpg" />
+    <Content Include="Resources\images\upload\13\rm-neutralna_1574763474.jpg" />
+    <Content Include="Resources\images\upload\13\v-sh5123-01_1557044342.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a3341.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a3347.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a4573.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a4582.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a7622.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a7628.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a7635.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a7670.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a7710.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a7752.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a7808.jpg" />
+    <Content Include="Resources\images\upload\21\-j2a8020.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l4913.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l4918.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l4924.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l4938.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l4950.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l4961.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l4984.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l4992.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l5019.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l5027.jpg" />
+    <Content Include="Resources\images\upload\21\-s1l5041.jpg" />
+    <Content Include="Resources\images\upload\21\1-1.jpg" />
+    <Content Include="Resources\images\upload\21\1-11-1400-x-1002.jpg" />
+    <Content Include="Resources\images\upload\21\1-12.jpg" />
+    <Content Include="Resources\images\upload\21\1-24.jpg" />
+    <Content Include="Resources\images\upload\21\1-28.jpg" />
+    <Content Include="Resources\images\upload\21\1-33.jpg" />
+    <Content Include="Resources\images\upload\21\1-41.jpg" />
+    <Content Include="Resources\images\upload\21\1-8.jpg" />
+    <Content Include="Resources\images\upload\21\2-12.jpg" />
+    <Content Include="Resources\images\upload\21\2-3.jpg" />
+    <Content Include="Resources\images\upload\21\2-5.jpg" />
+    <Content Include="Resources\images\upload\21\2-8.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a0052.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a0102.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a4242.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a4247.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a4315.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a4339.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a4373.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a4625.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a4645.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a5783.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a5788.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a5832.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a5849.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a5883.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a5900.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a5926.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a7936.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a7967.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8026.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8049.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8166.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8189.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8259.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8382.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8419_1564039856.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8423.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8672_1564039857.jpg" />
+    <Content Include="Resources\images\upload\21\3p1a8744.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a1440.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a3341.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a3347.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a4573.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a4582.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a7622.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a7628.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a7635.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a7670.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a7710.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a7752.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a7808.jpg" />
+    <Content Include="Resources\images\upload\21\768\-j2a8020.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l4913.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l4918.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l4924.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l4938.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l4950.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l4961.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l4984.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l4992.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l5019.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l5027.jpg" />
+    <Content Include="Resources\images\upload\21\768\-s1l5041.jpg" />
+    <Content Include="Resources\images\upload\21\768\1-1.jpg" />
+    <Content Include="Resources\images\upload\21\768\1-11-1400-x-1002.jpg" />
+    <Content Include="Resources\images\upload\21\768\1-12.jpg" />
+    <Content Include="Resources\images\upload\21\768\1-24.jpg" />
+    <Content Include="Resources\images\upload\21\768\1-28.jpg" />
+    <Content Include="Resources\images\upload\21\768\1-33.jpg" />
+    <Content Include="Resources\images\upload\21\768\1-41.jpg" />
+    <Content Include="Resources\images\upload\21\768\1-8.jpg" />
+    <Content Include="Resources\images\upload\21\768\2-12.jpg" />
+    <Content Include="Resources\images\upload\21\768\2-3.jpg" />
+    <Content Include="Resources\images\upload\21\768\2-5.jpg" />
+    <Content Include="Resources\images\upload\21\768\2-8.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a0052.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a4242.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a4247.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a4315.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a4339.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a4373.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a4625.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a4645.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a5783.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a5788.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a5832.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a5849.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a5883.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a5900.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a5926.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a6240.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a7264.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a7936.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a7967.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8026.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8049.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8166.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8189.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8259.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8382.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8419_1564039856.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8423.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8672_1564039857.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8695.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a8744.jpg" />
+    <Content Include="Resources\images\upload\21\768\3p1a9646.jpg" />
+    <Content Include="Resources\images\upload\21\768\v-sh5126-01-renamed-11411.jpg" />
+    <Content Include="Resources\images\upload\45\-j2a8303.jpg" />
+    <Content Include="Resources\images\upload\45\-j2a8332.jpg" />
+    <Content Include="Resources\images\upload\45\-j2a8802.jpg" />
+    <Content Include="Resources\images\upload\45\02082018-borissov-zaev-1.jpg" />
+    <Content Include="Resources\images\upload\45\02082018-borissov-zaev-2.jpg" />
+    <Content Include="Resources\images\upload\45\02082018-borissov-zaev-3.jpg" />
+    <Content Include="Resources\images\upload\45\02082018-borissov-zaev-4.jpg" />
+    <Content Include="Resources\images\upload\45\02082018-borissov-zaev-5.jpg" />
+    <Content Include="Resources\images\upload\45\02082018-borissov-zaev-6.jpg" />
+    <Content Include="Resources\images\upload\45\02082018-borissov-zaev-7.jpg" />
+    <Content Include="Resources\images\upload\45\05092018-pm-pametnik-1.jpg" />
+    <Content Include="Resources\images\upload\45\1710.jpg" />
+    <Content Include="Resources\images\upload\45\18.jpg" />
+    <Content Include="Resources\images\upload\45\1810.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a0269.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a0704.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a0781.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a0816.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a0822.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a0876.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a0930.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a1014.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a1023.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a1052.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a1076.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a1115.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a6224.jpg" />
+    <Content Include="Resources\images\upload\45\3p1a6356.jpg" />
+    <Content Include="Resources\images\upload\45\768\-j2a8303.jpg" />
+    <Content Include="Resources\images\upload\45\768\-j2a8332.jpg" />
+    <Content Include="Resources\images\upload\45\768\-j2a8802.jpg" />
+    <Content Include="Resources\images\upload\45\768\02082018-borissov-zaev-1.jpg" />
+    <Content Include="Resources\images\upload\45\768\02082018-borissov-zaev-2.jpg" />
+    <Content Include="Resources\images\upload\45\768\02082018-borissov-zaev-3.jpg" />
+    <Content Include="Resources\images\upload\45\768\02082018-borissov-zaev-4.jpg" />
+    <Content Include="Resources\images\upload\45\768\02082018-borissov-zaev-5.jpg" />
+    <Content Include="Resources\images\upload\45\768\02082018-borissov-zaev-6.jpg" />
+    <Content Include="Resources\images\upload\45\768\02082018-borissov-zaev-7.jpg" />
+    <Content Include="Resources\images\upload\45\768\05092018-pm-pametnik-1.jpg" />
+    <Content Include="Resources\images\upload\45\768\0510.jpg" />
+    <Content Include="Resources\images\upload\45\768\0610.jpg" />
+    <Content Include="Resources\images\upload\45\768\0710.jpg" />
+    <Content Include="Resources\images\upload\45\768\0810.jpg" />
+    <Content Include="Resources\images\upload\45\768\1010.jpg" />
+    <Content Include="Resources\images\upload\45\768\13.jpg" />
+    <Content Include="Resources\images\upload\45\768\1310.jpg" />
+    <Content Include="Resources\images\upload\45\768\1610.jpg" />
+    <Content Include="Resources\images\upload\45\768\1710.jpg" />
+    <Content Include="Resources\images\upload\45\768\18.jpg" />
+    <Content Include="Resources\images\upload\45\768\1810.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a0269.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a0704.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a0781.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a0816.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a0822.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a0876.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a0930.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a1014.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a1023.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a1052.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a1076.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a1115.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a6224.jpg" />
+    <Content Include="Resources\images\upload\45\768\3p1a6356.jpg" />
+    <Content Include="Resources\images\upload\45\768\front3.jpg" />
+    <Content Include="Resources\images\upload\45\768\israel-telaviv-pametnik-1.jpg" />
+    <Content Include="Resources\images\upload\45\768\israel-telaviv-pametnik-2.jpg" />
+    <Content Include="Resources\images\upload\45\768\israel-telaviv-pametnik-3.jpg" />
+    <Content Include="Resources\images\upload\45\768\israel-telaviv-pametnik-5.jpg" />
+    <Content Include="Resources\images\upload\45\768\israel-telaviv-pametnik-6.jpg" />
+    <Content Include="Resources\images\upload\45\768\nova.jpg" />
+    <Content Include="Resources\images\upload\45\768\za-saita-3.jpg" />
+    <Content Include="Resources\images\upload\45\front3.jpg" />
+    <Content Include="Resources\images\upload\45\israel-telaviv-pametnik-1.jpg" />
+    <Content Include="Resources\images\upload\45\israel-telaviv-pametnik-2.jpg" />
+    <Content Include="Resources\images\upload\45\israel-telaviv-pametnik-3.jpg" />
+    <Content Include="Resources\images\upload\45\israel-telaviv-pametnik-5.jpg" />
+    <Content Include="Resources\images\upload\45\israel-telaviv-pametnik-6.jpg" />
+    <Content Include="Resources\images\upload\45\nova.jpg" />
+    <Content Include="Resources\images\upload\45\za-saita-3.jpg" />
+    <Content Include="Resources\images\upload\46\768\bborissov.jpg" />
+    <Content Include="Resources\images\upload\47\768\ananiev-kiril.jpg" />
+    <Content Include="Resources\images\upload\47\768\angelkova.jpg" />
+    <Content Include="Resources\images\upload\47\768\b3e80376-1cb8-44d3-8ee5-59988336a7b7.jpg" />
+    <Content Include="Resources\images\upload\47\768\bbanov-2.jpg" />
+    <Content Include="Resources\images\upload\47\768\danail-kirilov-1-1238-x-1400.jpg" />
+    <Content Include="Resources\images\upload\47\768\donchev.jpg" />
+    <Content Include="Resources\images\upload\47\768\dsc-3670.jpg" />
+    <Content Include="Resources\images\upload\47\768\ezaharieva-new.jpg" />
+    <Content Include="Resources\images\upload\47\768\karanikolov.jpg" />
+    <Content Include="Resources\images\upload\47\768\kkarakachanov.jpg" />
+    <Content Include="Resources\images\upload\47\768\kkralev.jpg" />
+    <Content Include="Resources\images\upload\47\768\kvalchev.jpg" />
+    <Content Include="Resources\images\upload\47\768\mariana-nikolova1-900-x-1243.jpg" />
+    <Content Include="Resources\images\upload\47\768\ndimov.jpg" />
+    <Content Include="Resources\images\upload\47\768\petya-avramova.jpg" />
+    <Content Include="Resources\images\upload\47\768\rossen-jeliazkov-photo1.jpg" />
+    <Content Include="Resources\images\upload\47\768\tpetkova.jpg" />
+    <Content Include="Resources\images\upload\47\768\untitled.png" />
+    <Content Include="Resources\images\upload\47\768\vgoranov.jpg" />
+    <Content Include="Resources\images\upload\5\768\bborissov.jpg" />
+    <Content Include="Resources\images\upload\5\bborissov.jpg" />
+    <Content Include="Resources\images\upload\91\768\bulgaria-in-european-union-rivers-mini-map-svg.png" />
+    <Content Include="Resources\images\upload\91\bulgaria-in-european-union-rivers-mini-map-svg.png" />
+    <Content Include="Resources\images\upload\93\768\zname.gif" />
+    <Content Include="Resources\images\upload\93\zname.gif" />
+    <Content Include="Resources\images\upload\9\768\ananiev-kiril.jpg" />
+    <Content Include="Resources\images\upload\9\768\angelkova.jpg" />
+    <Content Include="Resources\images\upload\9\768\b3e80376-1cb8-44d3-8ee5-59988336a7b7.jpg" />
+    <Content Include="Resources\images\upload\9\768\bbanov-2.jpg" />
+    <Content Include="Resources\images\upload\9\768\danail-kirilov-1-1238-x-1400.jpg" />
+    <Content Include="Resources\images\upload\9\768\dsc-3670.jpg" />
+    <Content Include="Resources\images\upload\9\768\ezaharieva-new.jpg" />
+    <Content Include="Resources\images\upload\9\768\karanikolov.jpg" />
+    <Content Include="Resources\images\upload\9\768\kkarakachanov.jpg" />
+    <Content Include="Resources\images\upload\9\768\kkralev.jpg" />
+    <Content Include="Resources\images\upload\9\768\kvalchev.jpg" />
+    <Content Include="Resources\images\upload\9\768\mariana-nikolova1-900-x-1243.jpg" />
+    <Content Include="Resources\images\upload\9\768\ndimov.jpg" />
+    <Content Include="Resources\images\upload\9\768\petya-avramova.jpg" />
+    <Content Include="Resources\images\upload\9\768\rossen-jeliazkov-photo1.jpg" />
+    <Content Include="Resources\images\upload\9\768\tpetkova.jpg" />
+    <Content Include="Resources\images\upload\9\768\untitled.png" />
+    <Content Include="Resources\images\upload\9\768\vgoranov.jpg" />
+    <Content Include="Resources\images\upload\9\768\whatsapp-image-2017-07-27-at-15-52-07.jpg" />
+    <Content Include="Resources\images\upload\9\ananiev-kiril.jpg" />
+    <Content Include="Resources\images\upload\9\angelkova.jpg" />
+    <Content Include="Resources\images\upload\9\b3e80376-1cb8-44d3-8ee5-59988336a7b7.jpg" />
+    <Content Include="Resources\images\upload\9\bbanov-2.jpg" />
+    <Content Include="Resources\images\upload\9\danail-kirilov-1-1238-x-1400.jpg" />
+    <Content Include="Resources\images\upload\9\dsc-3670.jpg" />
+    <Content Include="Resources\images\upload\9\ezaharieva-new.jpg" />
+    <Content Include="Resources\images\upload\9\karanikolov.jpg" />
+    <Content Include="Resources\images\upload\9\kkarakachanov.jpg" />
+    <Content Include="Resources\images\upload\9\kkralev.jpg" />
+    <Content Include="Resources\images\upload\9\kvalchev.jpg" />
+    <Content Include="Resources\images\upload\9\mariana-nikolova1-900-x-1243.jpg" />
+    <Content Include="Resources\images\upload\9\ndimov.jpg" />
+    <Content Include="Resources\images\upload\9\petya-avramova.jpg" />
+    <Content Include="Resources\images\upload\9\rossen-jeliazkov-photo1.jpg" />
+    <Content Include="Resources\images\upload\9\tpetkova.jpg" />
+    <Content Include="Resources\images\upload\9\untitled.png" />
+    <Content Include="Resources\images\upload\9\vgoranov.jpg" />
+    <Content Include="Resources\images\upload\9\whatsapp-image-2017-07-27-at-15-52-07.jpg" />
+    <Content Include="Resources\images\upload\parallax\-j2a0466-2880-x-1920_bg.jpg" />
+    <Content Include="Resources\images\upload\parallax\snimka-ms-bg_en.jpg" />
+    <Content Include="Resources\index.html" />
+    <Content Include="Resources\js\frontend\defaultae52.js" />
+    <Content Include="Resources\js\frontend\jquery.min.js" />
+    <Content Include="Resources\js\frontend\modernizr-custom.js" />
+    <Content Include="Resources\js\frontend\translate\bg.js" />
+    <Content Include="Resources\js\frontend\translate\en.js" />
+    <Content Include="Resources\js\plugins\cookiebar\cookie-bar-bgr.png" />
+    <Content Include="Resources\js\plugins\cookiebar\jquery.cookiebar.css" />
+    <Content Include="Resources\js\plugins\cookiebar\jquery.cookiebar.min.js" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\css\lightgallery.min.css" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\img\loading.gif" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\img\video-play.png" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\img\vimeo-play.png" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\img\youtube-play.png" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\js\lg-autoplay.js" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\js\lg-fullscreen.js" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\js\lg-hash.js" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\js\lg-hash3860.js" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\js\lg-pager.js" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\js\lg-thumbnail.js" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\js\lg-video.js" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\js\lg-zoom.js" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\js\lightgallery.min.js" />
+    <Content Include="Resources\js\plugins\lightgallery\lib\jquery.mousewheel.min.js" />
+    <Content Include="Resources\js\plugins\lightslider\css\lightslider.css" />
+    <Content Include="Resources\js\plugins\lightslider\img\controls.png" />
+    <Content Include="Resources\js\plugins\lightslider\lightslider.js" />
+    <Content Include="Resources\js\plugins\parallax\parallax.min.js" />
+    <Content Include="Resources\js\plugins\ui\assets\css\jquery-ui.min.css" />
+    <Content Include="Resources\js\plugins\ui\jquery-ui-i18n.min.js" />
+    <Content Include="Resources\js\plugins\ui\jquery-ui.min.js" />
+    <Content Include="Resources\special\bg.html" />
+    <Content Include="Resources\special\en.html" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm_Index.aspx" />
+    <Content Include="WebForm_EN.aspx" />
+    <Content Include="WebForm_BG.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm_Index.aspx.cs">
+      <DependentUpon>WebForm_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Index.aspx.designer.cs">
+      <DependentUpon>WebForm_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_EN.aspx.cs">
+      <DependentUpon>WebForm_EN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_EN.aspx.designer.cs">
+      <DependentUpon>WebForm_EN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_BG.aspx.cs">
+      <DependentUpon>WebForm_BG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_BG.aspx.designer.cs">
+      <DependentUpon>WebForm_BG.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Resources\bg\pravitelstvo\ministar-predsedatel\intervyuta\godinata-v-izvodi-–-premierat-boyko-borisov-za-panorama-po-bnt.html.z" />
+    <Content Include="Resources\bg\pravitelstvo\partnyorstvo-za-otkrito-upravlenie\treti-natsionalen-plan-za-deystvie-v-ramkite-na-initsiativata-„partnyorstvo-za-otkrito-upravlenie“-1-yuli-2016-–-30-yuni-2018-g.c9.delay" />
+    <Content Include="Resources\bg\pravitelstvo\partnyorstvo-za-otkrito-upravlenie\treti-natsionalen-plan-za-deystvie-v-ramkite-na-initsiativata-„partnyorstvo-za-otkrito-upravlenie“-1-yuli-2016-–-30-yuni-2018-g.c9.delay.z" />
+    <Content Include="Resources\bg\pravitelstvo\partnyorstvo-za-otkrito-upravlenie\vtori-plan-za-deystvie-na-balgariya-po-initsiativata-“partnyorstvo-za-otkrito-upravlenie”.html.z" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\intervyuta\ministar-boil-banov-digitalizatsiyata-i-savmestnata-rabota-na-darzhavata-s-obshtinite-sa-klyuchat-za-opazvane-na-sgradite-–-pametnitsi-.z" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\intervyuta\ministar-boil-banov-za-men-tova-koeto-se-sluchva-e-prodalzhenie-na-tova-koeto-se-sluchi-po-vremeto-na-skandala-„alo-banov“.html.z" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\intervyuta\ministar-temenuzhka-petkova-nadyavam-se-v-hoda-na-pregovorite-po-aets-„belene“-v-sledvashtite-12-mesetsa-da-ima-dobar-rezultat.248.dela.z" />
+    <Content Include="Resources\bg\pravitelstvo\sastav-na-pravitelstvoto\intervyuta\vitsepremierat-ekaterina-zaharieva-v-nashata-politika-kam-makedoniya-ima-mnogo-poveche-neshta-–-ikonomika-turizam-svarzanost-kultura-ob.z" />
+    <Content Include="Resources\bg\prestsentar\galeria\ministar-predsedatelyat-boyko-borisov-nablyudava-takticheskite-zanyatiya-„otveten-udar-–-2019-g-“-„Strike-Back-2019“-v-novo-selo.html.z" />
+    <Content Include="Resources\bg\prestsentar\galeria\ministar-predsedatelyat-boyko-borisov-prisastva-na-natsionalnoto-voennomorsko-uchenie-„briz-2019“.html.z" />
+    <Content Include="Resources\bg\prestsentar\galeria\ministar-predsedatelyat-boyko-borisov-prisastva-na-zaklyuchitelniya-etap-na-takticheskoto-uchenie-s-boyni-strelbi-„shabla-2019-g.html.z" />
+    <Content Include="Resources\bg\prestsentar\galeria\ministar-predsedatelyat-boyko-borisov-uchastva-v-sreshtata-na-varha-na-darzhavnite-i-pravitelstvenite-rakovoditeli-v-saraevo-na-stranite-uchastnichki-v-protsesa-za-" />
+    <Content Include="Resources\bg\prestsentar\galeria\ministar-predsedatelyat-boyko-borisov-uchastva-v-sreshtata-na-varha-na-initsiativata-„berlinski-protses“-v-poznan.html.z" />
+    <Content Include="Resources\bg\prestsentar\galeria\osmata-sreshta-na-darzhavnite-i-pravitelstveni-rakovoditeli-na-initsiativata-„16-1“.html.z" />
+    <Content Include="Resources\bg\prestsentar\galeria\premierat-boyko-borisov-i-predsedatelyat-na-ep-antonio-tayani-uchastvaha-v-otkrivaneto-na-izlozhbeno-prostranstvo-„atanas-burov“.html.z" />
+    <Content Include="Resources\bg\prestsentar\novini\-s-21-topovni-salyuta-be-posreshtnat-premierat-borisov-v-memoriala-na-neznayniya-voin-v-natsionalniya-grobishten-park-„arlingtan“.html.z" />
+    <Content Include="Resources\bg\prestsentar\novini\balgariya-i-oshte-5-evropeyski-darzhavi-izpratiha-pismo-s-iskane-za-prerazglezhdane-na-paketa-„mobilnost-I“.html.z" />
+    <Content Include="Resources\bg\prestsentar\novini\ministar-predsedatelyat-boyko-borisov-prisastva-na-nagradite-za-ikonomika-za-2019-godina-na-krib-i-spisanie-„ikonomika“.html.z" />
+    <Content Include="Resources\bg\prestsentar\novini\ministar-predsedatelyat-boyko-borisov-prisastva-na-predstavyaneto-na-revolyutsionniya-3D-i-Cockpit-razraboten-ot-„visteon-balgariya“.z" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-i-kralyat-na-yordaniya-dogovoriha-domakinstvo-na-balgariya-po-protsesa-„akaba“-prez-2020-godina.html.z" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-prisastva-na-ofitsialnoto-otkrivane-na-moderniziraniya-zavod-za-sanitarna-armatura-„ideal-standart-–-vidima“-v-sevlievo.html.z" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-razporedi-rabota-v-palen-sinhron-i-v-sakrateni-srokove-otnosno-situatsiyata-s-yazovir-„studena“.html.z" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-borisov-se-sreshtna-s-generalniya-sekretar-na-„reporteri-bez-granitsi“-kristof-deloar.html.z" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-boyko-borisov-stana-parviyat-chuzhdestranen-lider-otlichen-sas-spetsialnata-nagrada-„fakla-na-svobodata“.html.z" />
+    <Content Include="Resources\bg\prestsentar\novini\premierat-boyko-borisov-vrachi-darzhavnata-nagrada-„sv-paisiy-hilendarski“-na-prof-dimitrina-georgieva-gyurova-savova.z" />
+    <Content Include="Resources\bg\prestsentar\predstoyashti-sabitia\vitsepremierat-mariyana-nikolova-shte-uchastva-v-mezhdunarodniya-biznes-forum-„indiya-evropa-29“.html.z" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\ministar-predsedatelyat-boyko-borisov-za-voennovazdushnata-uchebna-baza-„georgi-benkovski“.html.z" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\otkrivane-na-chetvartata-sreshta-na-mestnite-lideri-na-stranite-ot-initsiativata-„16-1“-ot-premiera-boyko-borisov.html.z" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\otpuskat-se-437-410-lv-za-planov-remont-na-motoren-korab-„parahod-radetski“.html.z" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\premierat-borisov-pri-otkrivane-na-na-izlozhbeno-prostranstvo-„atanas-burov“-v-evropeyskya-parlament.html.z" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\premierat-boyko-borisov-beshe-nagraden-s-nay-visokoto-darzhavno-otlichie-na-sarbiya-„ordenat-na-republika-sarbiya“.html.z" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\premierat-boyko-borisov-na-sreshtata-na-varha-za-mira-“nelsan-mandela”.html.z" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\sreshta-na-varha-na-initsiativata-„berlinski-protses“-v-poznan.html.z" />
+    <Content Include="Resources\bg\prestsentar\video\brifingi\uchastie-na-premierite-borisov-i-zyoder-v-kragla-masa-na-tema-„zashtita-na-vanshnata-granitsa-na-es-i-migratsionni-politiki-na-republika-balgariya“.338.delay.z" />
+    <Content Include="Resources\en\About-Bulgaria\NATIONAL-SYMBOLS\Bulgaria’s-Coat-of-Arms.html.z" />
+    <Content Include="Resources\en\About-Bulgaria\NATIONAL-SYMBOLS\Bulgaria’s-National-Flag.html.z" />
+    <Content Include="Resources\files\common\DOC039.pdf" />
+    <Content Include="Resources\files\common\file-1.pdf" />
+    <Content Include="Resources\files\common\file_2_2.pdf" />
+    <Content Include="Resources\files\common\file_3_1.pdf" />
+    <Content Include="Resources\files\common\file_4.pdf" />
+    <Content Include="Resources\files\common\GovPr_2017-2021.pdf" />
+    <Content Include="Resources\files\common\за търг 2019 %28003%29.docx" />
+    <Content Include="Resources\fonts\frontend\calibri.ttf" />
+    <Content Include="Resources\fonts\frontend\calibrib.ttf" />
+    <Content Include="Resources\fonts\frontend\fontawesome-webfont3e6e.eot" />
+    <Content Include="Resources\fonts\frontend\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Resources\fonts\frontend\fontawesome-webfont3e6e.woff" />
+    <Content Include="Resources\fonts\frontend\fontawesome-webfontd41d.eot" />
+    <Content Include="Resources\fonts\frontend\SourceSansPro-Regular.otf" />
+    <Content Include="Resources\fonts\frontend\SourceSansPro-Semibold.otf" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\fonts\lgd41d.eot" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\fonts\lgd641.eot" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\fonts\lgd641.ttf" />
+    <Content Include="Resources\js\plugins\lightgallery\dist\fonts\lgd641.woff" />
+    <Content Include="Resources\special\bg\prestsentar\novini\ministar-predsedatelyat-boyko-borisov-prisastva-na-predstavyaneto-na-revolyutsionniya-3D-i-Cockpit-razraboten-ot-„visteon-balgariya“.html.z" />
+    <Content Include="Resources\special\bg\prestsentar\novini\premierat-borisov-se-sreshtna-s-generalniya-sekretar-na-„reporteri-bez-granitsi“-kristof-deloar.html.z" />
+    <Content Include="Resources\special\en\About-Bulgaria\NATIONAL-SYMBOLS\Bulgaria’s-National-Flag.html.z" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Resources\bg\administratsia\byudzhet\kasovo-izpalnenie-na-darzhavniya-byudzhet\" />
+    <Folder Include="Resources\bg\administratsia\dokumenti\drugi-dokumenti\" />
+    <Folder Include="Resources\css\fonts\" />
+    <Folder Include="Resources\en\Cabinet\CABINET-MEMBERS\" />
+    <Folder Include="Resources\en\Cabinet\Prime-Minister\" />
+    <Folder Include="Resources\special\bg\administratsia\byudzhet\" />
+    <Folder Include="Resources\special\bg\administratsia\dokumenti\" />
+    <Folder Include="Resources\special\bg\administratsia\dostap-do-obshtestvena-informatsia\" />
+    <Folder Include="Resources\special\bg\administratsia\funktsii-i-struktura\" />
+    <Folder Include="Resources\special\bg\administratsia\profil-na-kupuvacha\" />
+    <Folder Include="Resources\special\bg\pravitelstvo\balgarsko-predsedatelstvo-na-saveta-na-es\" />
+    <Folder Include="Resources\special\bg\pravitelstvo\ministar-predsedatel\" />
+    <Folder Include="Resources\special\bg\pravitelstvo\programa-na-pravitelstvoto\" />
+    <Folder Include="Resources\special\bg\pravitelstvo\programa-za-upravlenie-na-pravitelstvoto-na-republika-balgariya-za-perioda-2017-2021-g\" />
+    <Folder Include="Resources\special\bg\pravitelstvo\sastav-na-pravitelstvoto\" />
+    <Folder Include="Resources\special\bg\prestsentar\video\" />
+    <Folder Include="Resources\special\en\About-Bulgaria\BULGARIAN-PUBLIC-HOLIDAYS\" />
+    <Folder Include="Resources\special\en\About-Bulgaria\FORM-OF-GOVERNMENT\" />
+    <Folder Include="Resources\special\en\About-Bulgaria\GENERAL-INFORMATION\" />
+    <Folder Include="Resources\special\en\About-Bulgaria\HISTORY\" />
+    <Folder Include="Resources\special\en\Cabinet\" />
+    <Folder Include="Resources\special\en\Press-center\News\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54821</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44347/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
